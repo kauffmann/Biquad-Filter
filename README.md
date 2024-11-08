@@ -1,13 +1,13 @@
-CMake JUCE Audio Plugin Template
+**A Biquard 2-order IIR filter. LPF, HPF, Notch, BandPass, HighShelf and LowShelf.  **
 
 
-Creates an audio plugin (e.g., a VST3 plugin) with JUCE, C++ using CMake. 
+![Biquad_filter](https://github.com/user-attachments/assets/fb49dd35-6615-49fe-a8ee-404706001df2)
 
 
-* Handling of third-party dependencies with the CPM package manager, downloading JUCE and GoogleTest
-* Add unit test project with GoogleTest
-* Add assets to project (replace current content with your own)
-* Add include/source files to project (replace current content with your own)
+
+
+Creates an audio plugin (e.g., a VST3 plugin). Created with JUCE 8, C++ and CMake. 
+
 
 
 ## Usage
@@ -37,5 +37,4 @@ pre-commit install
 (for this you may need to install `pre-commit` with `pip`: `pip install pre-commit`).
 
 
-Thanks to Jan Wilczek from https://thewolfsound.com/ (video tutorial) for getting me started with CMake. Also thanks to Sudara at https://melatonin.dev/blog/how-to-use-cmake-with-juce/ 
-Other learning resources are: juce Cmake API doc https://github.com/juce-framework/JUCE/blob/master/docs/CMake%20API.md  and of course CMake documentation at cmake.org.
+
