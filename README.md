@@ -1,7 +1,8 @@
 A Biquard 2-order IIR filter. LPF, HPF, Notch, BandPass, HighShelf and LowShelf. 
 
+![FIlter](https://github.com/user-attachments/assets/a6da1ee7-454e-4566-9613-9e2a6e88fb37)
 
-![Biquad_filter](https://github.com/user-attachments/assets/fb49dd35-6615-49fe-a8ee-404706001df2)
+
 
 
 
