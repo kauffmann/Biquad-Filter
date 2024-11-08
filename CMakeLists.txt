@@ -56,8 +56,7 @@ enable_testing()
 
 # Must add all dir that has a cmakeLists file that define targets ----------------
 
-# Adds all the targets configured in the "Graphic Assets" folder.
-add_subdirectory(Graphic-Assets)
+
 
 # Adds all the targets configured in the "plugin" folder.
 add_subdirectory(plugin)

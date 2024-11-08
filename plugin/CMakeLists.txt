@@ -17,7 +17,7 @@ set(INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Source")
 # But for plugins/DAW project standard is DDL for plugin to work.
 juce_add_plugin(${PROJECT_NAME}
     COMPANY_NAME "MyCompany" # change this 
-    BUNDLE_ID com.BeGoodAudio.audioplugin # change this
+    BUNDLE_ID com.Company.audioplugin # change this
     IS_SYNTH FALSE # may change this
     NEEDS_MIDI_INPUT TRUE # may change this
     NEEDS_MIDI_OUTPUT FALSE # may change this
@@ -34,19 +34,17 @@ juce_generate_juce_header(${PROJECT_NAME})
 
 
 
-# If you are like me, you'll use globs for your sanity.
-# Just ensure you employ CONFIGURE_DEPENDS so the build system picks up changes
 
+# ensure you employ CONFIGURE_DEPENDS so the build system picks up changes
 #file(GLOB_RECURSE SourceFiles CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.h")
 #target_sources(${PROJECT_NAME} PRIVATE SourceFiles )
 
-# If you want to appease the CMake gods and avoid globs, manually add files like so:
+# Appease the CMake gods and avoid globs, manually add files like so:
 target_sources(${PROJECT_NAME} 
     PRIVATE 
-    "${CMAKE_CURRENT_SOURCE_DIR}/Source/PluginEditor.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Source/PluginProcessor.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/Source/PluginProcessor.cpp"
-    "${INCLUDE_DIR}/PluginEditor.h"
-    "${INCLUDE_DIR}/PluginProcessor.h"
+    "${INCLUDE_DIR}/MultiFilter.h"
 )
 
  # Sets the include directories of the plugin project(used by preprocessor to put headers .h in source files).
@@ -61,7 +59,7 @@ target_include_directories(${PROJECT_NAME}
 
 # Link against AudioPluginData in Graphic assets
 target_link_libraries(${PROJECT_NAME} PUBLIC
-    AudioPluginData
+    
     # Add other libraries as needed
 )
  
@@ -109,7 +107,7 @@ target_compile_definitions(${PROJECT_NAME}
         JUCE_WEB_BROWSER=0
         JUCE_USE_CURL=0
         JUCE_VST3_CAN_REPLACE_VST2=0
-        JUCE_DISPLAY_SPLASH_SCREEN=0
+        #JUCE_DISPLAY_SPLASH_SCREEN=0
 )
 
 
