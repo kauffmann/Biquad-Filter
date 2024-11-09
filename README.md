@@ -29,13 +29,7 @@ In visual studio and visual studio code you can do this within editor IDE, using
 
 
 
-To run clang-format on every commit, in the main directory execute
 
-```bash
-pre-commit install
-```
-
-(for this you may need to install `pre-commit` with `pip`: `pip install pre-commit`).
 
 
 
