@@ -68,7 +68,7 @@ public:
         updateCoefficients();
     }
 
-    double processSample(float& input)
+    void processSample(float& input)
     {
         // Smooth the cutoff frequency and update coefficients only if there is a change.
         if (smoothedCutoffFreq.isSmoothing())
@@ -89,7 +89,8 @@ public:
         prevY2 = prevY1;   // 2 step put y1 in register
         prevY1 = output;   // 1 step put output in register
 
-        return output;
+        input = output;
+        
     }
 
 private:

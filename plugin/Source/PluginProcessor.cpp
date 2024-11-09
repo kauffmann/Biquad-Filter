@@ -190,7 +190,7 @@ void FilterAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
       
         for (size_t i = 0; i < buffer.getNumSamples(); i++)
         {
-            channelData[i] = mFilter[channel].processSample(channelData[i]);
+            mFilter[channel].processSample(channelData[i]);
         }
 
     }
