@@ -57,7 +57,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout FilterAudioProcessor::create
         juce::NormalisableRange<float>(0.1f, 10.0f, 1.0f),
         0.707f)); // default: 0.707 (Butterworth Q)
 
-    params.push_back(std::make_unique<juce::AudioParameterFloat>("GAIN", "Gain", juce::NormalisableRange<float>(-12.0f, 12.0f, 1.0f), 0.0f));
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("GAIN", "Shelf Gain", juce::NormalisableRange<float>(-12.0f, 12.0f, 1.0f), 0.0f));
 
 
     params.push_back(std::make_unique<juce::AudioParameterChoice>("FILTER", "Filter Type",

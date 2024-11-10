@@ -24,7 +24,7 @@ juce_add_plugin(${PROJECT_NAME}
     PLUGIN_MANUFACTURER_CODE Mlpm # change this
     PLUGIN_CODE Expl # change this
     FORMATS VST3 # may change this
-    PRODUCT_NAME "MyProduct" # change this
+    PRODUCT_NAME "MultiFilter" # change this
 )
 
 
